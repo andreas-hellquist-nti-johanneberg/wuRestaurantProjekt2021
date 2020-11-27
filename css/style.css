@@ -1,0 +1,77 @@
+div#container {
+    height: 100%;
+    display: grid;
+    grid-template-areas: 
+    '.  he he he . '
+    'rh rh lh .  . '
+    're re li li . '
+    '.  fo fo fo . '
+    ;
+    
+    grid-template-columns: 10% 5% 70% 5% 10%;
+    grid-template-rows: 10% 10% 70% 10%;
+    gap: 1em;
+
+}
+
+div#container header#main-header {
+    grid-area: he;
+    text-align: center;
+    border: solid black;
+}
+
+div#container h2#reviews-header {
+    grid-area: rh;
+
+    margin: 0px;
+    /* border: solid black; */
+    display: flex;
+}
+
+div#container h2#lists-header {
+    grid-area: lh;
+
+    /* border: solid black; */
+    display: flex;
+}
+
+div#container section#reviews {
+    grid-area: re;
+    /* border: solid black; */
+
+    display: flex;
+}
+
+div#container section#lists {
+    grid-area: li;
+    width: 100%;
+
+    /* border: solid black; */
+}
+
+div#container section#lists ul {
+    /* height: 100%; */
+    /* width: 100%; */
+    padding: 0px;
+    display: flex;
+    list-style: circle inside;
+    justify-content: space-evenly;
+    flex-direction: column;
+    /* border: solid black; */
+}
+
+div#container section#lists ul li {
+    /* margin-top: 2px; */
+    /* margin-bottom: 2px; */
+    padding: 1em;
+    font-size: 4em;
+    /* border: solid black; */
+    box-shadow: -1px -1px 2px 1px grey;
+}
+
+div#container footer#main-footer {
+    grid-area: fo;
+
+    border: solid black;
+    display: flex;
+}
