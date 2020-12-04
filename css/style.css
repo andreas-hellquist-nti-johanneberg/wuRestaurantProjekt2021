@@ -1,27 +1,38 @@
+body {
+    margin: 0px;
+}
+
 div#container {
-    height: 150vh;
+    /* height: 150vh; */
     display: grid;
     grid-template-areas: 
-    '.  he he he . '
-    're re li li . '
-    're re li li . '
-    '.  fo fo fo . '
+    'bg1  he he he bg2'
+    're  re  li  li  .  '
+    're  re  li  li  .  '
+    '.   fo  fo  fo  .  '
     ;
     
     grid-template-columns: 10% 5% 70% 5% 10%;
-    grid-template-rows: 10% 10% 70% 10%;
+    /* grid-template-rows: 10% 10% 70% 10%; */
     gap: 1em;
+    overflow-x: hidden;
 
 }
 
 div#container header#main-header {
     grid-area: he;
+    height: 10em;
     text-align: center;
     color: white;
     border: solid black;
-    box-shadow: 2px 2px 3px grey;
+    /* box-shadow: 2px 2px 3px grey; */
 
     background-image: url("../img/todd-quackenbush-x5SRhkFajrA-unsplash.jpg");
+}
+
+div#container div.background-green {
+    grid-area: bg1 / bg1 / bg2 / bg2;
+    background-color: darkgreen;
 }
 
 div#container section#reviews {
@@ -87,6 +98,19 @@ div#container section#lists ul li {
 div#container footer#main-footer {
     grid-area: fo;
 
+    height: 2em;
     border: solid black;
     display: flex;
+}
+
+div#container footer#main-footer nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+div#container footer#main-footer nav {
+    color: grey;
 }
