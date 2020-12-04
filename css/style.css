@@ -13,7 +13,7 @@ div#container {
     ;
     
     grid-template-columns: 10% 5% 70% 5% 10%;
-    /* grid-template-rows: 10% 10% 70% 10%; */
+    grid-template-rows: 10% 10% 70% 10%;
     gap: 1em;
     overflow-x: hidden;
 
@@ -111,6 +111,6 @@ div#container footer#main-footer nav {
     width: 100%;
 }
 
-div#container footer#main-footer nav {
+div#container footer#main-footer nav a {
     color: grey;
 }

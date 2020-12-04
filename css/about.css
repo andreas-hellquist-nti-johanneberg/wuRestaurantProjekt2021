@@ -1,0 +1,89 @@
+body {
+    margin: 0px;
+}
+
+div#container {
+    display: grid;
+    height: 100vh;
+    grid-template-areas: 
+    'he he he he he he'
+    'ab ab ab co co co'
+    '.  aw aw aw aw . '
+    '.  fo fo fo fo . '
+    ;
+
+    grid-template-columns: 10% 25% 25% 15% 15% 10%;
+    grid-template-rows: 20% 60% 15% 5%;
+
+    /* gap: 1em; */
+
+    overflow-x: hidden;
+}
+
+div#container header {
+    grid-area: he;
+
+    display: flex;
+    justify-content: space-evenly;
+    flex: 1;
+
+    height: 7em;
+    margin: 0.5em;
+
+    border: solid black;
+}
+
+div#container section#about {
+    grid-area: ab;
+    border: solid black;
+
+    margin: 0.5em;
+    padding: 1em;
+}
+
+div#container figure#contact {
+    grid-area: co;
+
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: flex-start; */
+
+    overflow: hidden;
+    margin: 0.5em;
+    border: solid black;
+}
+
+div#container figure#contact img {
+    width: 100%;
+    border: solid black;
+}
+
+div#container section#awards {
+    grid-area: aw;
+    border: solid black;
+
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0.5em;
+}
+
+div#container footer#main-footer {
+    grid-area: fo;
+
+    margin: 0.5em;
+    height: 2em;
+    border: solid black;
+    display: flex;
+}
+
+div#container footer#main-footer nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+div#container footer#main-footer nav a {
+    color: grey;
+}
