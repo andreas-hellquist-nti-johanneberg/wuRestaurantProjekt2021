@@ -6,16 +6,18 @@ div#container {
     /* height: 150vh; */
     display: grid;
     grid-template-areas: 
-    'bg1  he he he bg2'
-    're  re  li  li  .  '
-    're  re  li  li  .  '
-    '.   fo  fo  fo  .  '
+    'bg1  he  he  he  bg2'
+    're   re  li  li  .  '
+    're   re  li  li  .  '
+    '.    fo  fo  fo  .  '
     ;
     
     grid-template-columns: 10% 5% 70% 5% 10%;
     grid-template-rows: 10% 10% 70% 10%;
-    gap: 1em;
+    /* gap: 1em; */
     overflow-x: hidden;
+
+    background-color: darkgreen;
 
 }
 
@@ -28,22 +30,22 @@ div#container header#main-header {
     /* box-shadow: 2px 2px 3px grey; */
 
     background-image: url("../img/todd-quackenbush-x5SRhkFajrA-unsplash.jpg");
-}
 
-div#container div.background-green {
-    grid-area: bg1 / bg1 / bg2 / bg2;
-    background-color: darkgreen;
+    margin-bottom: 0.5em;
 }
 
 div#container section#reviews {
     grid-area: re;
 
     border: solid black;
+    border-radius: 5px;
     box-shadow: 2px 2px 3px grey;
+    
+    margin-right: 0.5em;
+    background-color: antiquewhite;
 }
 
 div#container section#reviews h2 {
-    color: green;
     margin-left: 1em;
 }
 
@@ -64,14 +66,19 @@ div#container section#reviews div article {
 
 div#container section#lists {
     grid-area: li;
-    width: 100%;
+    /* width: 100%; */
 
     padding: 1em;
     border: solid black;
+    border-radius: 5px;
+
+    box-shadow: 2px 2px 3px grey;
+
+    background-color: antiquewhite;
 }
 
 div#container section#lists h2 {
-    color: red;
+    color: black;
 }
 
 div#container section#lists ul {
@@ -100,7 +107,12 @@ div#container footer#main-footer {
 
     height: 2em;
     border: solid black;
+    border-radius: 5px;
     display: flex;
+
+    margin-top: 1em;
+
+    background-color: antiquewhite;
 }
 
 div#container footer#main-footer nav {
@@ -112,5 +124,5 @@ div#container footer#main-footer nav {
 }
 
 div#container footer#main-footer nav a {
-    color: grey;
+    color: black;
 }

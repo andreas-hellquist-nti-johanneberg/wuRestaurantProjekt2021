@@ -13,11 +13,12 @@ div#container {
     ;
 
     grid-template-columns: 10% 25% 25% 15% 15% 10%;
-    grid-template-rows: 20% 60% 15% 5%;
+    grid-template-rows: 15% 65% 15% 5%;
 
     /* gap: 1em; */
 
     overflow-x: hidden;
+    background-color: darkgreen;
 }
 
 div#container header {
@@ -28,17 +29,23 @@ div#container header {
     flex: 1;
 
     height: 7em;
-    margin: 0.5em;
+    margin-bottom: 0.5em;
 
     border: solid black;
+
+    background-color: antiquewhite;
 }
 
 div#container section#about {
     grid-area: ab;
     border: solid black;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px grey;
 
     margin: 0.5em;
     padding: 1em;
+
+    background-color: antiquewhite;
 }
 
 div#container figure#contact {
@@ -51,6 +58,10 @@ div#container figure#contact {
     overflow: hidden;
     margin: 0.5em;
     border: solid black;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px grey;
+
+    background-color: antiquewhite;
 }
 
 div#container figure#contact img {
@@ -61,10 +72,14 @@ div#container figure#contact img {
 div#container section#awards {
     grid-area: aw;
     border: solid black;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px grey;
 
     display: flex;
     justify-content: space-evenly;
     margin: 0.5em;
+
+    background-color: antiquewhite;
 }
 
 div#container footer#main-footer {
@@ -73,7 +88,11 @@ div#container footer#main-footer {
     margin: 0.5em;
     height: 2em;
     border: solid black;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px grey;
     display: flex;
+
+    background-color: antiquewhite;
 }
 
 div#container footer#main-footer nav {
@@ -85,5 +104,5 @@ div#container footer#main-footer nav {
 }
 
 div#container footer#main-footer nav a {
-    color: grey;
+    color: black;
 }
