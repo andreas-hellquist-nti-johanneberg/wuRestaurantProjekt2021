@@ -188,6 +188,8 @@
     <br>
     <p>När jag kollade igenom instruktionerna en sista gång såg jag att man tydligen bara skulle ha ett gemensamt css-dokument för alla tre sidorna vilket jag helt hade missat. Jag tänkte att det skulle vara naturligt att använda tre olika dokument eftersom de har tre olika layouter, men uppenbarligen inte. Lyckligtvis hade jag utnyttjat cascading-delen av css när jag skrev alla selektorer, så att sätta ihop alla regler till ett dokument var inte jobbigare än att byta id på container-divarna från "container" till "index-container", "about-container" och "competition-container", samt använda find and replace på mina css filer för att se till att filernas respektive selektorer bara gäller för sidans innehåll. Jag tycker fortfarande det känns rimligare att bara ha tre olika stylesheets eftersom nästan ingenting utom bak och förgrundsfärg är gemensamt mellan dem (och förgrundsfärgen måste man applicera individuellt på elementen ändå), men nu har jag följt uppgiftsbeskrivningen i alla fall.</p>
 
+    <p>Slutligen avslutade jag med att komprimera några av bilderna för att göra dem lite mindre. Jag använde helt enkelt så mycket komprimering jag kunde utan att det blev märkbart på hemsidan. Den absolut största skilladen såg man i bilden som används som bakgrund i headern i index.html (todd-quackenbush-x5SRhkFajrA-unsplash.jpg), som efter komprimering gick från 486 Kib till 84 Kib. Jag tänkte omvandla några pnger till jpg, men efter att ha tittat på storlekar blev vissa av bilderna konstigt nog större vilket gjorde att jag behöll png:erna istället.</p>
+
     <h2>4. Testning</h2>
     <p>All text på sidan (utom titeln i index.html) är svart på antiquewhite vilket ger 100% godkänt från contrastchecker:</p>
     <img src="contrastchecker-antiquewhite-black.jpg">
@@ -232,6 +234,19 @@
             <img src="screenshots-edge/competition.jpg" alt="">
         </li>
     </ul>
+
+    <h3>Automatisk validering</h3>
+    <p>index.html har inga fel, men den ger en varning för varje recension eftersom jag använde article utan en rubrik. De två alternativen jag kan se då är att recensioner antingen inte ska vara elementet article (men det är den bästa semantiska taggen jag kunde komma på), eller att recensionerna bör ha en rubrik. Jag tycker det känns som ett rimligt alternativ att recensioner ska ha rubriker, men eftersom det inte riktigt är recensioner, utan snarare kommentarer från kunder tycker jag inte att det passar i det här fallet. Det är möjligt att jag skulle kunna byta ut article mot en div, men jag tycker article passar bättre (eller så har jag bara helt missförstått syftet med article).</p>
+    <img src="index-validation.png">
+
+    <p>about.html fick samma varning som index.html fast för en sectioni istället för article. Den här gången håller jag inte med eftersom den här typen av "bilder på utmärkelser längst ner på sidan" är någonting som jag har sett på flera stora sidor. Det är möjligt att det inte ska vara en section, men eftersom det är en del av sidan som grupperar ihop liknande grejer tycker jag att section är ett passande element.</p>
+    <img src="about-validation.png">
+
+    <p>competition.html fick också samma varning på en section. Återigen håller jag inte riktigt med eftersom jag tycker det är väldigt tydligt att alla delar av informationssektionen behandlar Gården Ram-Sej, men att jag konsekvent får samma varning kan naturligtvis innebära att jag helt enkelt använder de semantiska taggarna fel. Jag håller inte med så jag tänker inte ändra sidan, men till nästa projekt tänker jag validera koden mer än en gång i slutet så att jag förhoppningsvis kan använda taggarna lite mer som det är tänkt (dock tycker jag inte att det är så mycket fel på nuvarande användning).</p>
+    <img src="competition-validation.png">
+    
+    <p>Mitt css hade inte varken några fel eller varningar att ta hänsyn till:</p>
+    <img src="css-validation.png">
 
     <h2>5. Utvärdering</h2>
     <p>Sett både till design, kodkvalitet och ambitionsnivå skulle jag säga att det här är mitt största och bästa verk inom webutveckling hittills, men det betyder inte att processen har gått felfritt. De olika sidorna har gått igenom många revisioner (flera gånger har saker ändrats fram och tillbaka), och vissa saker är jag fortfarande inte helt nöjd med, men jag skulle ändå säga att jag har gjort mitt bästa. Eftersom jag var helt ny till webutveckling i början av kursen har en av de viktigaste sakerna för mig varit att bli mer bekväm med html och (framförallt) css, och det skulle jag säga att jag har blivit. Dels har jag lärt mig mer rent tekniskt i form av olika properties och liknande, men framförallt har jag fått en bättre känsla för hur webläsaren tolkar css. Detta har gjort det enklare för mig att felsöka och skriva css.</p>
