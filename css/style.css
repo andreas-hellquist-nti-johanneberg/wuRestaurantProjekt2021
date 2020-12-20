@@ -1,9 +1,9 @@
 body {
     margin: 0px;
+    background-color: darkgreen;
 }
 
 div#container {
-    /* height: 150vh; */
     display: grid;
     grid-template-areas: 
     'bg1  he  he  he  bg2'
@@ -13,12 +13,10 @@ div#container {
     ;
     
     grid-template-columns: 10% 5% 70% 5% 10%;
+    /* grid-template-rows: 10% 7fr 10%; */
     grid-template-rows: 10% 10% 70% 10%;
     /* gap: 1em; */
     overflow-x: hidden;
-
-    background-color: darkgreen;
-
 }
 
 div#container header#main-header {
@@ -32,6 +30,14 @@ div#container header#main-header {
     background-image: url("../img/todd-quackenbush-x5SRhkFajrA-unsplash.jpg");
 
     margin-bottom: 0.5em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div#container header#main-header h1 {
+    font-size: 5em;
 }
 
 div#container section#reviews {
@@ -111,6 +117,7 @@ div#container footer#main-footer {
     display: flex;
 
     margin-top: 1em;
+    margin-bottom: 1em;
 
     background-color: antiquewhite;
 }
